@@ -7,7 +7,7 @@ Features:
 * registration
 * authenticated routes
 * flash messages
-* ejs layouts
+* pug layouts
 
 Very minimal express boilerplate.
 
