@@ -1,0 +1,20 @@
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Express Starter
+    meta(name='HandheldFriendly' content='True')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/styles.css')
+body.bg-gray-200.text-gray-500
+    nav.bg-gray-800.flex.justify-between.p-6.h-48
+        a.text-2xl(href='#') Express Starter
+        div
+            a.px-2(href='/dashboard') Dashboard
+            a.px-2(href='/login') Login
+            a.px-2(href='/register') Register
+            a.px-2(href='/logout') Logout
+    .container.mx-auto.text-gray-600.-my-32
+        .pb-6.pt-3
+            a.px-2.text-white(href='/dashboard') Dashboard
+            .bg-white.rounded-lg.shadow-md.p-8
+                block body

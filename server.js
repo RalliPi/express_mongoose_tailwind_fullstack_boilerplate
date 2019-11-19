@@ -31,9 +31,11 @@ app.use(session({
 }))
 app.use(flash())
 
-app.engine('ejs', ejslocals);
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+// app.engine('ejs', ejslocals);
+// app.set('views', __dirname + '/views');
+// app.set('view engine', 'ejs');
+
+app.set('view engine', 'pug')
 
 app.use(express.static(__dirname + '/public'));
 

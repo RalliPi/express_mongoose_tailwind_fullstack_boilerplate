@@ -1,0 +1,11 @@
+extends layouts/default.pug
+
+block body
+    div
+        h1.text-xl.text-gray-800.font-bold.border-b.mb-6
+            | Your personal dashboard
+
+        if messages.error
+            p.text-red-500.text-xs.italic #{messages.error}
+        div
+            | This is the protected dashboard
