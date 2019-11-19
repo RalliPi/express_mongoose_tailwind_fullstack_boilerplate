@@ -1,7 +1,6 @@
 var express = require('express')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
-const ejslocals = require("ejs-locals")
 var flash = require("express-flash")
 var MongoDBStore = require('connect-mongodb-session')(session);
 var routes = require('./routes')
