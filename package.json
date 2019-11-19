@@ -1,0 +1,34 @@
+{
+  "name": "express_mongoose_fullstack_boilerplate",
+  "version": "0.0.1",
+  "description": "fullstack web development boilerplate utilizing express, mongoose and tailwind css. Features login, registratin, authenticated routes and flash messages",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon index.js -e js,ejs",
+    "start": "NODE_ENV=production node index.js",
+    "styles": "npx tailwind build ./styles/styles_source.css -o ./public/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "connect-mongodb-session": "^2.2.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv-flow": "^3.1.0",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.7.1",
+    "tailwindcss": "^1.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "fullstack",
+    "boilerplate"
+  ],
+  "author": "Ralf Pitter"
+}
