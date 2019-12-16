@@ -9,14 +9,16 @@ module.exports = {
         var user = await User.findOne({ username: req.body.username })
         if (user != null) {
             //check password
-            try {
-                await bcrypt.compare(req.body.password, user.password)
-                req.session.uid = user.id
-                res.redirect("/dashboard")
-            } catch (e) {
-                req.flash("error", "Wrong credentials.")
-                res.redirect("login")
-            }
+            bcrypt.compare(req.body.password, user.password).then(isValid => {
+                if (isValid) {
+                    req.session.uid = user.id
+                    res.redirect("/dashboard")
+                }
+                else {
+                    req.flash("error", "Wrong credentials.")
+                    res.redirect("login")
+                }
+            })
         } else {
             req.flash("error", "Wrong credentials.")
             res.redirect("login")
